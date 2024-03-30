@@ -1,5 +1,17 @@
 
-
+@keyframes enterScene
+{
+	from
+	{
+		opacity: 0.0;
+		transform:translateX(-50%);
+	}
+	to
+	{
+		opacity: 1.0;
+		transform:translateX(0%);
+	}
+}
 
 @keyframes fadeOut
 {
@@ -39,15 +51,13 @@
 	}
 }
 
-main
+.div-intro
 {
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	flex-direction: column;
+	animation-name: enterScene;
+	animation-delay: 3s;
 }
 
-.text-group
+.cool-fade-div
 {
 	background-color: darkred;
 	animation-name: fadeOut;
@@ -57,7 +67,7 @@ main
 	height: 75%;
 	font-size: 100%; /*Default Font Size: 16px * 1 = 16px*/
 }
-.text-group:hover
+.cool-fade-div:hover
 {
 	background-color: red;
 	animation-name: fadeIn;
